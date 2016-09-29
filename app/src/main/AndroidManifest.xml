@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.SmartScreen.tv"
-    android:versionCode="25"
-    android:versionName="1.5" >
+    package="com.touch.tv"
+    android:versionCode="11"
+    android:versionName="1.1">
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -11,8 +11,22 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--uses-permission android:name="android.permission.WAKE_LOCK" /-->
     <uses-permission android:name="android.permission.NFC" />
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -22,38 +36,48 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
 
     <uses-permission android:name="android.intent.category.DEFAULT" />
-     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-     <uses-permission android:name="android.permission.STORAGE" />
-     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
 
     <application
+        android:name="com.ypcloud.touch.Application"
         android:allowBackup="true"
         android:icon="@drawable/smartscreen"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" 
-        
-        >
+        android:theme="@style/CustomTheme">
+
+        <!--在此處修改Default Activity 請修改
+            android:name="com.ypcloud.touch.Decoder"
+            為
+            android:name="com.ypcloud.touch.MainActivity"
+            即可-->
+
+        <!--android:name="com.ypcloud.uploader.FileManagerActivity"-->
+
         <activity
-            android:name="tv.nakasi.apk.MainActivity"
+            android:name="com.ypcloud.touch.MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
-            android:label="@string/app_name"         
-             >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
-                    <action android:name="android.nfc.action.TECH_DISCOVERED" />
-                    <action android:name="android.nfc.action.TAG_DISCOVERED" />
-                    <category android:name="android.intent.category.DEFAULT" />
-   
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="application/tv.nakasi.apk" />
             </intent-filter>
         </activity>
 
-        <receiver android:name="tv.nakasi.apk.startrun" >
+        <receiver android:name="com.ypcloud.touch.startrun">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
 
@@ -62,12 +86,15 @@
         </receiver>
 
         <activity
-            android:name="tv.nakasi.apk.Main_jujue_Activity"
-            android:label="@string/title_activity_main_jujue_" >
-        </activity>
+            android:name="com.ypcloud.touch.Decoder"
+            android:screenOrientation="portrait"></activity>
+
         <activity
-            android:name="tv.nakasi.apk.Main_ceppei"
-            android:label="@string/title_activity_main_ceppei" >
-        </activity>
+            android:name="com.ypcloud.touch.Main_jujue_Activity"
+            android:label="@string/title_activity_main_jujue_"></activity>
+        <activity
+            android:name="com.ypcloud.touch.Main_ceppei"
+            android:label="@string/title_activity_main_ceppei"></activity>
+        <activity android:name="com.ypcloud.touch.MusicStreaming" />
     </application>
 </manifest>

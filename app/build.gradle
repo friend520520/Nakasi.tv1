@@ -1,27 +1,44 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 23
+    buildToolsVersion '23.0.1'
 
-    defaultConfig {
-        applicationId "com.SmartScreen.tv"
-        minSdkVersion 14
-        targetSdkVersion 14
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
     }
 
+
+    defaultConfig {
+        applicationId 'org.itri.qpid'
+        minSdkVersion 14
+        targetSdkVersion 14
+        versionCode 15
+        versionName '1.1'
+        testApplicationId 'tv.jujue.tv'
+    }
     buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        livecam_r {
         }
+    }
+    productFlavors {
     }
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:19.1.0'
+    compile 'com.android.support:appcompat-v7:23.1.1'
     compile files('libs/App2Web.1.1.jar')
     compile files('libs/projecto3nfclib.jar')
     compile files('libs/WebService.1.0.jar')
     compile files('libs/YouTubeAndroidPlayerApi.jar')
+    compile files('libs/adqrcodereaderview-lib.jar')
+    compile 'cn.bingoogolapple:bga-qrcodecore:1.0.9@aar'
+    compile 'cn.bingoogolapple:bga-zbar:1.0.9@aar'
+    compile files('libs/httpclient-4.3.6.jar')
+    compile files('libs/httpcore-4.3.3.jar')
+    compile files('libs/httpmime-4.3.6.jar')
+    compile 'com.estimote:sdk:0.9.4@aar'
+    compile files('libs/universal-image-loader-1.9.4.jar')
 }
