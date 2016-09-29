@@ -2,39 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\eclipse\Nakasi.tv1\app\libs\App2Web.1.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="0f7cb35ad19297c4f0667b985a2be328bf74c5b9">
-        <dex dex="C:\eclipse\Nakasi.tv1\app\build\intermediates\pre-dexed\debug\App2Web.1.1-b6881dcd9203592d19aff284a8bce01a9e991ef2.jar" />
-    </item>
-    <item
-        jar="C:\eclipse\Nakasi.tv1\app\libs\WebService.1.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="ef6c7256793fac5d9cfa28cd24b0f51e3117e03b">
-        <dex dex="C:\eclipse\Nakasi.tv1\app\build\intermediates\pre-dexed\debug\WebService.1.0-aa56ed40fb7694150e74dff2b5bf53b4467cdd90.jar" />
-    </item>
-    <item
-        jar="C:\eclipse\Nakasi.tv1\app\libs\projecto3nfclib.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="40ec206f252e74f4ca507798f3edffabd38b52cc">
-        <dex dex="C:\eclipse\Nakasi.tv1\app\build\intermediates\pre-dexed\debug\projecto3nfclib-437b3f96a49eab523b3e93b43d9e89c2578f18d8.jar" />
-    </item>
-    <item
-        jar="C:\Users\jack\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="C:\eclipse\Nakasi.tv1\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-3db47f4707f4a09820eb94d3cf643e939e983de8.jar" />
-    </item>
-    <item
-        jar="C:\eclipse\Nakasi.tv1\app\libs\YouTubeAndroidPlayerApi.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="29ccfbddf99584bddbaab62c0cf50dcd1c564e43">
-        <dex dex="C:\eclipse\Nakasi.tv1\app\build\intermediates\pre-dexed\debug\YouTubeAndroidPlayerApi-2e4deb750e9d332cbbc78548fd090b1a13e97fee.jar" />
+        jar="C:\android\201609\jujue2QPID\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="935342e6bd244129641f4b719dcb06bddf2b7d02">
+        <dex dex="C:\android\201609\jujue2QPID\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_c64c80538e67a417108f5346ef8b80ab8017127d\classes.dex" />
     </item>
 
 </items>
